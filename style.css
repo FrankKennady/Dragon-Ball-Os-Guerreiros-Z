@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Metal Mania", system-ui;
+}
+
+.menu {
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    display: inline-block;
+    z-index: 10;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+}
+
+li {
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+li:hover {
+    transform: scale(1.30);
+}
+
+.spheres {
+    max-width: 70px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.spheres:hover {
+    opacity: 4;
+}
+
+.spheres:active{
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px #ff9d00) brightness(1.2);
+    transition: 0.1s;
+}
+
+
+
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding: 0;
+    background-color: #000000;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.1;
+}
+
+.container-texts {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dragonball-img {
+    max-width: 270px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+h1 {
+    justify-content: center;
+    color: #e63d00;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-left: 95px;
+    margin-bottom: 10px;
+}
+
+p.story-char {
+    display: inline-block;
+    width: 30%;
+    justify-content: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    text-align: justify;
+    margin: 10px 5px 10px;
+    line-height: 1.5;
+}
+
+p.information {
+    display: inline-block;
+    width: 30%;
+    justify-content: center;
+    font-size: 18px;
+    text-align: justify;
+    margin: 10px 5px 10px;
+    line-height: 1.5;
+    color: #e63d00;
+}
+
+.container-image {
+    display: flex;
+    position: fixed;
+    top: 60px;
+    left: 55%;
+
+}
+
+.dragonball-image {
+    display: flex;
+    width: 280px;
+    height: auto;
+    margin: 40px 0;
+    text-align: right;
+    align-items: center;
+
+    animation: mover 3s ease-in-out infinite alternate;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 157, 0, 0.8);
+    /* Laranja Dragon Ball com transparência */
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.music-control:hover {
+    transform: scale(1.1);
+
+}
+
+.music-control img {
+    width: 25px;
+    height: 25px;
+
+}
+
+/* para tablet*/
+@media screen and (max-width: 979px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .background {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+    }
+
+    .container-texts {
+        position: absolute;
+        top: 30%;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dragonball-img {
+        max-width: 180px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    p.story-char {
+        width: 80%;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    p.information {
+        color: #e63d00;
+        width: 80%;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .container-image {
+        position: absolute;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        transform: translateX(-80%);
+    }
+
+    .dragonball-image {
+        width: 130px;
+        height: auto;
+        margin: 0px 0;
+        align-items: flex-start;
+
+    }
+
+    .menu {
+        position: absolute;
+        top: 89%;
+        left: 55%;
+        transform: translateX(-58%);
+    }
+
+    ul {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 53px;
+    }
+
+    .spheres {
+        max-width: 60px;
+        opacity: 0.6;
+    }
+
+    .spheres:hover {
+        opacity: 4;
+    }
+
+    .spheres:active {
+        transform: scale(1.8);
+    }
+
+    .music-control {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        left: 690px;
+
+    }
+
+
+}
+
+/* para celular*/
+@media screen and (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .background {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+    }
+
+    .container-texts {
+        position: absolute;
+        top: 40%;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dragonball-img {
+        max-width: 150px;
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    p.story-char {
+        width: 80%;
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    p.information {
+        color: #e63d00;
+        width: 80%;
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .container-image {
+        position: absolute;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        transform: translateX(-68%);
+    }
+
+    .dragonball-image {
+        width: 130px;
+        height: auto;
+        margin: 0px 0;
+        align-items: flex-start;
+
+    }
+
+    .menu {
+        position: absolute;
+        top: 93%;
+        left: 54%;
+        transform: translateX(-58%);
+    }
+
+    ul {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 53px;
+    }
+
+    .spheres {
+        max-width: 40px;
+        opacity: 0.6;
+    }
+
+    .spheres:hover {
+        opacity: 4;
+    }
+
+    .music-control {
+        position: absolute;
+        bottom: 600px;
+        left: 370px;
+        background: rgba(255, 157, 0, 0.8);
+        /* Laranja Dragon Ball com transparência */
+        border: 2px solid #fff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transition: transform 0.3s;
+    }
+
+    .music-control:hover {
+        transform: scale(1.1);
+
+    }
+
+    .music-control img {
+        width: 20px;
+        height: 20px;
+
+    }
+}
