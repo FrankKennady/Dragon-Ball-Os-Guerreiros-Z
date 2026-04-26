@@ -1,3 +1,5 @@
+<!-- Este Projeto foi desenvolvido como base de treinamento em html, Css e JavaScripts -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,11 +14,10 @@
 </head>
 
 <body>
-
+    <!-- Aqui esta toda a parte do menu, as esferas e o botão de controlar o audio On ou Off-->
     <div class="menu">
         <audio id="bg-music" loop>
-            <source src="./assets/musica-tema.mp3" type="audio/mpeg">4
-            Seu navegador não suporta áudio.
+            <source src="./assets/musica-tema.mp3" type="audio/mpeg"> 
         </audio>
 
         <button id="music-btn" class="music-control">
@@ -59,9 +60,11 @@
         </ul>
 
     </div>
-
+    <!-- aqui esta dividido em dois conteiner um onde fica a historia do personagem e outro onde fica a imagem -->
     <main>
         <img class="background" src="./assets/cenario.jpg" alt="cenario">
+
+        <!-- conteiner onde fica toda a historia do personagem e a logo do Dragonball Z -->
         <div class="container-texts">
             <img class="dragonball-img" src="./assets/dragonball.png" alt="logo-dragonball" />
 
@@ -74,13 +77,11 @@
         
         <p class="information">Desperte o poder oculto: toque nas esferas para convocar os Guerreiros Z!</p>
         </div>
-
+        
+        <!-- Aqui fica a imagem do personagem, onde com a ajuda do JavaScript vai mudando ao ser clicado na Esfera do Dragão -->
         <div class="container-image">
             <img class="dragonball-image" src="./assets/historia.png" alt="Son-Goku" />
         </div>
-
-
-
     </main>
 
 </body>

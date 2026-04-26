@@ -1,8 +1,9 @@
-const nameElement = document.querySelector(".char-name")
-const storyElement = document.querySelector(".story-char")
-const imgElement = document.querySelector(".dragonball-image")
+const nameElement = document.querySelector(".char-name") // Chamando do HTML o Nome do Personagem, para fazer a alteração quando clicado na esfera. 
+const storyElement = document.querySelector(".story-char") // Chamando do HTML a historia do personagem, para fazer a alteração quando clicado na esfera.
+const imgElement = document.querySelector(".dragonball-image") // Chamando do HTML a Imagem do personagem, para fazer a alteração quando clicado na esfera.
 
 
+// - Banco de Dados: Um objeto contendo as informações de cada guerreiro. As chaves (goku, vegeta...)  é os IDs das esferas no HTML.
 const characterData = {
     "goku": {
         name: "Son Goku",
@@ -55,24 +56,25 @@ const characterData = {
 
 }
 
-const spheres = document.querySelectorAll(".spheres")
+const spheres = document.querySelectorAll(".spheres") // Chamando do HTML todas as esferas
 
+    // Clique nas esferas
 spheres.forEach(sphere => {
     sphere.addEventListener("click", () => {
-        const charId = sphere.id;
-        const info = characterData[charId];
+        const charId = sphere.id; // Descobre qual foi a esfera clicada pelo ID
+        const info = characterData[charId]; // Busca os dodos correspondente do ID
 
         if (info) {
-            nameElement.innerText = info.name;
-            storyElement.innerText = info.description;
-            imgElement.src = info.image;
-            imgElement.alt = info.name;// Dentro do evento de clique, troque a linha da descrição por:
-            
-
+            nameElement.innerText = info.name; // Ao ser clicado na esfera ele muda o nome do personagme 
+            storyElement.innerText = info.description; // Ao ser clicada na esfera ele muda a historia
+            imgElement.src = info.image; // Ao ser clicada muda o personagem 
+            imgElement.alt = info.name;// Aqui muda o nome da imagem
+           
         }
     })
 })
 
+    // Aqui é o controle de musica Play/Pause
 const music = document.getElementById('bg-music');
 const musicBtn = document.getElementById('music-btn');
 const musicIcon = document.getElementById('music-icon');

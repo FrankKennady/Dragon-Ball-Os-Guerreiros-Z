@@ -1,3 +1,6 @@
+    /* Aqui esta doda a parte do Designer da Interface onde dar uma cara a pagina,
+    faz os ajustes em tamanho das esferas, do personagem, das letras, botões, fundo mais escuros...*/
+
 * {
     margin: 0;
     padding: 0;
@@ -5,48 +8,7 @@
     font-family: "Metal Mania", system-ui;
 }
 
-.menu {
-    position: absolute;
-    top: 10%;
-    left: 90%;
-    display: inline-block;
-    z-index: 10;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    gap: 15px;
-}
-
-li {
-    cursor: pointer;
-    transition: transform 0.5s;
-}
-
-li:hover {
-    transform: scale(1.30);
-}
-
-.spheres {
-    max-width: 70px;
-    opacity: 0.6;
-    cursor: pointer;
-}
-
-.spheres:hover {
-    opacity: 4;
-}
-
-.spheres:active{
-    transform: scale(1);
-    filter: drop-shadow(0 0 15px #ff9d00) brightness(1.2);
-    transition: 0.1s;
-}
-
-
-
-
+    /*Esse é o container principal da pagina onde define toda a tela e o fundo escuro*/
 main {
     width: 100vw;
     height: 100vh;
@@ -55,12 +17,50 @@ main {
     background-color: #000000;
 }
 
+    /*Essa é a imagem de fundo onde coloquei a opacidade de 10% para deixar o cenario mais sutil */
 .background {
     width: 100vw;
     height: 100vh;
     opacity: 0.1;
 }
 
+    /*Aqui é o menu onde ta as esferas, onde coloquie ela para a lateral, colocando o display: inline-block*/
+.menu {
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    display: inline-block;
+    z-index: 10;
+}
+    /*Aqui ajustei o espaçamento e direita e removir a marcação das bolinhas com o list-style:none; */
+ul {
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+    
+}
+    /*Ajustes nas esferas*/
+.spheres {
+    max-width: 70px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+ 
+    /* Aqui é onde coloquie para quando passar o mouse a esfera dar um efeito de zooom*/
+.spheres:hover {
+    transform: scale(1.30);
+    opacity: 4;
+}
+
+    /* A esfera quando clicada da o efeito como se estivesse sendo invocada (aura)*/
+.spheres:active{
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px #ff9d00) brightness(1.2);
+    transition: 0.1s;
+}
+
+    /*Aqui é o container de texto*/
 .container-texts {
     position: fixed;
     top: 0;
@@ -68,14 +68,17 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 5;
 }
 
+    /*A logo do Dragon Ball Z*/
 .dragonball-img {
     max-width: 270px;
     margin-top: 100px;
     margin-left: 50px;
 }
 
+    /*nome dos personagens*/
 h1 {
     justify-content: center;
     color: #e63d00;
@@ -85,6 +88,7 @@ h1 {
     margin-bottom: 10px;
 }
 
+    /*Historia dos personagens*/
 p.story-char {
     display: inline-block;
     width: 30%;
@@ -96,7 +100,7 @@ p.story-char {
     margin: 10px 5px 10px;
     line-height: 1.5;
 }
-
+    /*Texto Pedindo para clicar nas esfras*/
 p.information {
     display: inline-block;
     width: 30%;
@@ -108,6 +112,7 @@ p.information {
     color: #e63d00;
 }
 
+    /*Container onde fica a imagem do personagem e a animação de flutuar do personagem*/
 .container-image {
     display: flex;
     position: fixed;
@@ -127,6 +132,7 @@ p.information {
     animation: mover 3s ease-in-out infinite alternate;
 }
 
+    /*Animação de flutuação (sobe e desce) */
 @keyframes mover {
     0% {
         transform: translateY(0);
@@ -136,13 +142,12 @@ p.information {
         transform: translateY(-30px);
     }
 }
-
+    /* Botão de Música Redondo e flutuante */
 .music-control {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background: rgba(255, 157, 0, 0.8);
-    /* Laranja Dragon Ball com transparência */
+    background: #ff9d00cc;
     border: 2px solid #fff;
     border-radius: 50%;
     width: 50px;
@@ -166,7 +171,7 @@ p.information {
 
 }
 
-/* para tablet*/
+    /* RESPONSIVIDADE PARA TABLETS*/
 @media screen and (max-width: 979px) {
 
     main {
@@ -277,7 +282,7 @@ p.information {
 
 }
 
-/* para celular*/
+    /* RESPONSIVIDADE PARA CELULARES*/
 @media screen and (max-width: 600px) {
     main {
         display: flex;
