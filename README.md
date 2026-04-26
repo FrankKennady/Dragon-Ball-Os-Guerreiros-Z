@@ -61,6 +61,12 @@ Este projeto foi um marco no meu desenvolvimento, onde pude consolidar e aplicar
 
 ---
 
+## 🤝 Contribuições e Feedback
+
+Este projeto faz parte da minha jornada de aprendizado no **DEVCLUB**. Feedbacks e **críticas construtivas** são extremamente bem-vindos! Se você viu algo que pode ser otimizado ou tem uma ideia para uma nova funcionalidade, sinta-se à vontade para abrir uma *Issue* ou entrar em contato comigo.
+
+---
+
 ## 🛡️ Licença
 Este projeto está licenciado sob a Licença MIT - consulte o arquivo ([LICENSE.md](LICENSE.md)) para detalhes.
 
