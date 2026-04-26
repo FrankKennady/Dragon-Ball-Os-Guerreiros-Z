@@ -62,5 +62,5 @@ Este projeto foi um marco no meu desenvolvimento, onde pude consolidar e aplicar
 ---
 
 ## 🛡️ Licença
-Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE para detalhes.
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE.md para detalhes.
 
